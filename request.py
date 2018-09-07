@@ -1,12 +1,27 @@
 import requests
 import json
 
-headers={'Content-type': 'application/json', 'Accept': 'text/plain'}
-url_api='http://127.0.0.1:5000/1'
+# importing the requests library
+import requests
 
-content_json={"Valor":"79","idpos":"asd","huella":"asdasd"}
+# api-endpoint
+
+
+headers={'Content-type': 'application/json', 'Accept': 'text/plain'}
+#url_api='http://192.168.40.57:5000/1'
+url_api='http://127.0.0.1:5000/pos/4'
+
+
+content_json={"Valor":"79","idpos":"asd","huella":"sdas334","PIN":"0224"}
 content=json.dumps(content_json)
 #resp = requests.get(url_api,headers=header)
 
 resp =requests.post(url_api, data=content_json)
-print(resp)
+#resp.status_code
+#200
+#resp.headers['content-type']
+#text/json
+#resp.encoding
+#resp.json()
+#mensaje en jsnon
+print(resp.json())
