@@ -13,7 +13,7 @@ def main():
     db = DataBase("Jack1996jack", "IdPayer")
     #paths
     api.add_resource(Pos, '/pos/<string:option>',resource_class_kwargs={ 'connection': db })
-    app.run(debug=True)
+    app.run(host="0.0.0.0",port='5001',debug=True)
 
 if __name__ == "__main__": main()
 

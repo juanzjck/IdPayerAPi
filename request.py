@@ -9,7 +9,7 @@ import requests
 
 headers={'Content-type': 'application/json', 'Accept': 'text/plain'}
 #url_api='http://192.168.40.57:5000/1'
-url_api='http://127.0.0.1:5000/pos/4'
+url_api='http://192.168.4.254:5000/pos/4'
 
 
 content_json={"Valor":"79","idpos":"asd","huella":"sdas334","PIN":"0224"}

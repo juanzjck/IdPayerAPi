@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdn.xchange.la/paybox/index.js"></script>
+
+</head>
+<body>
+<input type="text" id="PayboxRemail" value="">
+<input type="text" id="PayboxSendmail" value="">
+<input type="text" id="PayboxRename" value="">
+<input type="text" id="PayboxSendname" value="">
+<input type="text" id="PayboxAmount" value="">
+<!-- Campo Opcional -->
+<input type="text" id="PayboxDescription" value="">
+<div id="ButtonPaybox"></div>
+<script >
+
+var data = {
+
+/* Email de la cuenta XChange o Id/Class del elemento html que posee el valor */
+
+PayboxRemail: "#PayboxRemail",
+
+/* Email del usuario que realiza el pago o Id/Class del elemento html que posee el valor */
+
+PayboxSendmail: "#PayboxSendmail",
+
+/* Nombre del usuario/cuenta XChange o Id/Class del elemento html que posee el valor */
+
+PayboxRename: "#PayboxRename",
+
+/* Nombre del usuario que realiza el pago o Id/Class del elemento html que posee el valor */
+
+PayboxSendname: "#PayboxSendname",
+
+/* Ejemplo: 100.00, 10.00, 1.00 o Id/Class del elemento html que posee el valor */
+
+PayboxAmount: "#PayboxAmount",
+
+/* Descripcion del pago o Id/Class del elemento html que posee el valor */
+
+PayboxDescription: "#PayboxDescription",
+
+/* Tipo de Ejecución
+ * Production: true (Modo Producción, Se procesarán cobros y se cargarán al sistema, afectará a la tdc)
+ * Production: false (Modo Prueba, se realizaran cobros de prueba y no se guardará ni afectará al sistema)
+*/
+
+PayboxProduction: false,
+};
+</script>
+<script >var onAuthorize = function(response) {
+    /* Referencia a la vista donde se aplicará el API "parent.document"  */
+    /* Ejemplo */
+    /* Insertar un texto al final del body */
+    /*jQuery(parent.document).find("body").append(response.status);*/
+    console.log(response)
+};
+  </script>
+</body>
+</html>
